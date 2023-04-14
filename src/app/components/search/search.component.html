@@ -1,0 +1,4 @@
+<form [formGroup]="searchCityForm" (ngSubmit)="searchCity()">
+  <p-autoComplete formControlName="city" [suggestions]="suggestions" (completeMethod)="citySuggestion($event)"></p-autoComplete>
+  <p-button icon="pi pi-search" type="submit"></p-button>
+</form>
