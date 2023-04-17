@@ -14,7 +14,8 @@
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-category let-columns="columns">
-    <tr [style]="{ backgroundColor: category.color + '40' }">
+    <!-- <tr [style]="{ backgroundColor: category.color + '40' }"> -->
+    <tr [style]="{ color: category.color, fontWeight: '500'}">
       <td>
         {{ category.name }}
       </td>
