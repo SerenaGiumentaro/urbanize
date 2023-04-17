@@ -1,4 +1,4 @@
-import { Component, DoCheck , OnInit} from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { CityDataService } from 'src/app/services/city-data.service';
 
 @Component({
@@ -6,8 +6,8 @@ import { CityDataService } from 'src/app/services/city-data.service';
   templateUrl: './data-view.component.html',
   styleUrls: ['./data-view.component.scss'],
 })
-export class DataViewComponent implements OnInit{
-  constructor(private cityDataService: CityDataService){}
+export class DataViewComponent implements OnInit {
+  constructor(private cityDataService: CityDataService) {}
   cardCityData: {
     name: string;
     score: number;
@@ -26,18 +26,19 @@ export class DataViewComponent implements OnInit{
     imgSite: '',
   };
 
-  categories!: [{
-    color: string;
-    name: string;
-    score_out_of_10: number;
-  }]
+  categories!: [
+    {
+      color: string;
+      name: string;
+      score_out_of_10: number;
+    }
+  ];
 
   ngOnInit(): void {
     this.cityDataService.data$.subscribe({
-      next: res => {
-        this.categories = [...res.categories]
-      }
-    })
-
+      next: (res) => {
+        this.categories = [...res.categories];
+      },
+    });
   }
 }

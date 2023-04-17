@@ -38,8 +38,8 @@ export class CityDataService {
     summary: '',
     teleport_city_score: 0,
   };
-  dataSubject = new BehaviorSubject<CityScore>(this.cityScore)
-  data$ = this.dataSubject.asObservable()
+  dataSubject = new BehaviorSubject<CityScore>(this.cityScore);
+  data$ = this.dataSubject.asObservable();
 
   getCurrentUrbanArea() {
     return this.urbanArea;
@@ -49,8 +49,8 @@ export class CityDataService {
     return this.cityScore;
   }
 
-  getCurrentCityImg(){
-    return this.cityImg
+  getCurrentCityImg() {
+    return this.cityImg;
   }
 
   getAllCities(query: string) {
@@ -62,7 +62,7 @@ export class CityDataService {
   fillCityScore() {
     this.getCityScore(this.urbanArea.href).subscribe({
       next: (res) => {
-        this.dataSubject.next(res)
+        this.dataSubject.next(res);
         this.cityScore = res;
       },
     });

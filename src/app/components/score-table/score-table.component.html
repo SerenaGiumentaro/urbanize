@@ -6,7 +6,7 @@
   <ng-template pTemplate="header">
     <tr>
       <th>
-        {{cols[0]}}
+        {{ cols[0] }}
       </th>
       <th pSortableColumn="score_out_of_10">
         {{ cols[1] }}<p-sortIcon field="score_out_of_10"></p-sortIcon>
@@ -14,12 +14,12 @@
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-category let-columns="columns">
-    <tr [style]="{backgroundColor: category.color + '40'}">
+    <tr [style]="{ backgroundColor: category.color + '40' }">
       <td>
-        {{category.name}}
+        {{ category.name }}
       </td>
       <td>
-        {{ category.score_out_of_10  | number: "1.1-2"}}
+        {{ category.score_out_of_10 | number : "1.1-2" }}
       </td>
     </tr>
   </ng-template>

@@ -18,7 +18,7 @@ export class CityCardComponent implements DoCheck {
     summary: string;
     imgLicense: string;
     imgPhotographer: string;
-    imgSite: string
+    imgSite: string;
   } = {
     name: '',
     score: 0,
@@ -26,7 +26,7 @@ export class CityCardComponent implements DoCheck {
     summary: '',
     imgLicense: '',
     imgPhotographer: '',
-    imgSite: ''
+    imgSite: '',
   };
 
   ngDoCheck(): void {
@@ -39,9 +39,10 @@ export class CityCardComponent implements DoCheck {
       this.cardCityData.name = urbanArea.name;
       this.cardCityData.summary = cityData.summary;
       this.cardCityData.hrefImg = cityImg.photos[0].image.mobile;
-      this.cardCityData.imgLicense = cityImg.photos[0].attribution.license
-      this.cardCityData.imgPhotographer = cityImg.photos[0].attribution.photographer
-      this.cardCityData.imgSite = cityImg.photos[0].attribution.site
+      this.cardCityData.imgLicense = cityImg.photos[0].attribution.license;
+      this.cardCityData.imgPhotographer =
+        cityImg.photos[0].attribution.photographer;
+      this.cardCityData.imgSite = cityImg.photos[0].attribution.site;
     }
   }
 }
