@@ -1,1 +1,19 @@
-<p>city-card works!</p>
+<div *ngIf="haveData">
+  <p-card
+    header="{{ cardCityData.name }}"
+    subheader="Score: {{ cardCityData.score | number: '1.1-2' }}"
+  >
+    <ng-template pTemplate="header">
+      <img
+        alt="{{ cardCityData.name }} photo"
+        src="{{ cardCityData.hrefImg }}"
+      />
+      <div class="attribution">
+        <p>Photographer: {{ cardCityData.imgPhotographer }}
+        License: {{ cardCityData.imgLicense }}
+        Site: {{ cardCityData.imgSite }}</p>
+      </div>
+    </ng-template>
+    <p [innerHTML]="cardCityData.summary"></p>
+  </p-card>
+</div>

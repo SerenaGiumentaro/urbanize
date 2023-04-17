@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-score-table',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ScoreTableComponent {
 
+  @Input() categories!: [{
+    color: string;
+      name: string;
+      score_out_of_10: number;
+  }]
+
+  cols: string[] = ['Categories', 'Score']
 }

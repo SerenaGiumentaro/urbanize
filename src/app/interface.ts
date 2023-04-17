@@ -1,5 +1,5 @@
 export interface SearchCity {
-  //response to https://api.teleport.org/api/cities/?search=${event.query} 
+  //response to https://api.teleport.org/api/cities/?search=${event.query}
   _embedded: {
     'city:search-results': [
       {

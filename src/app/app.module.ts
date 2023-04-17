@@ -14,6 +14,11 @@ import { SearchComponent } from './components/search/search.component';
 import { ButtonModule } from 'primeng/button';
 import { ChartModule } from 'primeng/chart';
 import { AutoCompleteModule } from 'primeng/autocomplete';
+import { CardModule } from 'primeng/card';
+import { DataViewComponent } from './components/data-view/data-view.component';
+import { MessagesModule } from 'primeng/messages';
+import { TableModule } from 'primeng/table';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +27,8 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
     CityCardComponent,
     ScoreTableComponent,
     ScoreChartComponent,
-    SearchComponent
+    SearchComponent,
+    DataViewComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,10 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
     ReactiveFormsModule,
     AutoCompleteModule,
     ButtonModule,
-    
+    CardModule,
+    MessagesModule,
+    TableModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
