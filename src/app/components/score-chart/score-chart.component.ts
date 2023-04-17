@@ -23,6 +23,43 @@ export class ScoreChartComponent implements OnInit {
     },
   ];
   chartData!: any;
+  options = {
+    indexAxis: 'y',
+    maintainAspectRatio: false,
+    aspectRatio: .5,
+    plugins: {
+        legend: {
+            labels: {
+              usePointStyle: true,
+                color: '#353535'
+            }
+        }
+    },
+    scales: {
+        x: {
+            ticks: {
+                color: '#353535',
+                font: {
+                    weight: 500
+                }
+            },
+            grid: {
+                color: '#656565',
+                drawBorder: false
+            }
+        },
+        y: {
+            ticks: {
+                color: '#353535'
+            },
+            grid: {
+                color: '#656565',
+                drawBorder: false
+            }
+        }
+    }
+};
+
 
   ngOnInit(): void {
     this.cityDataService.data$.subscribe({
@@ -32,7 +69,7 @@ export class ScoreChartComponent implements OnInit {
           labels: this.categories.map((cat) => cat.name),
           datasets: [
             {
-              label: 'Score',
+              label: 'City Score',
               data: this.categories.map((cat) => cat.score_out_of_10),
               backgroundColor: this.categories.map((cat) => cat.color),
             },
@@ -42,3 +79,7 @@ export class ScoreChartComponent implements OnInit {
     });
   }
 }
+
+
+
+
