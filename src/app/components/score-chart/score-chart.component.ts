@@ -31,14 +31,14 @@ export class ScoreChartComponent implements OnInit {
         legend: {
             labels: {
               usePointStyle: true,
-                color: '#353535'
+                color: '#eb5757'
             }
         }
     },
     scales: {
         x: {
             ticks: {
-                color: '#353535',
+                color: '#eb5757',
                 font: {
                     weight: 500
                 }
@@ -50,7 +50,7 @@ export class ScoreChartComponent implements OnInit {
         },
         y: {
             ticks: {
-                color: '#353535'
+                color: '#eb5757'
             },
             grid: {
                 color: '#656565',
