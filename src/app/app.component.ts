@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'urbanize';
 
-  hasData: boolean = true;
+  hasData: boolean = false;
 
   checkDataAfterSubmit(hasData: boolean) {
     this.hasData = hasData;
