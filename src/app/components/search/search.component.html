@@ -4,15 +4,12 @@
     [suggestions]="suggestions"
     (completeMethod)="citySuggestion($event)"
     placeholder="Search city..."
+    (onSelect)="searchCity()"
   ></p-autoComplete>
   <p-button icon="pi pi-search" type="submit"></p-button>
+  <div>
+    <small *ngIf="noResult" class="p-error"><strong>No city data avalaible.</strong> Please try an other city</small>
+  </div>
 </form>
 
-<div class="card" *ngIf="noResult">
-  <p-messages
-    [(value)]="message"
-    [enableService]="true"
-    [closable]="false"
-    [showTransitionOptions]="'400ms'"
-  ></p-messages>
-</div>
+

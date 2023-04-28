@@ -41,6 +41,9 @@ export class CityDataService {
   dataSubject = new BehaviorSubject<CityScore>(this.cityScore);
   data$ = this.dataSubject.asObservable();
 
+  dataImage = new BehaviorSubject<CityImage>(this.cityImg);
+  dataImage$ = this.dataImage.asObservable();
+
   getCurrentUrbanArea() {
     return this.urbanArea;
   }
@@ -71,6 +74,7 @@ export class CityDataService {
   fillCityImg() {
     this.getCityImage(this.urbanArea.href).subscribe({
       next: (res) => {
+        this.dataImage.next(res)
         this.cityImg = res;
       },
     });

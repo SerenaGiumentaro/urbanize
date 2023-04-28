@@ -14,15 +14,7 @@ export class SearchComponent implements OnInit {
   @Output() hasData: EventEmitter<boolean> = new EventEmitter<boolean>();
   suggestions!: any[];
   noResult: boolean = false;
-  message!: Message[];
   ngOnInit(): void {
-    this.message = [
-      {
-        severity: 'error',
-        summary: 'No city data available:',
-        detail: 'Please try with an other city',
-      },
-    ];
     this.searchCityForm = new FormGroup({
       city: new FormControl(),
     });

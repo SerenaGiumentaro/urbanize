@@ -10,11 +10,26 @@
       />
       <div class="attribution">
         <p>
-          &copy;Photographer: {{ cardCityData.imgPhotographer }} 	&boxv; License:
+          &copy;Photographer: {{ cardCityData.imgPhotographer }} &boxv; License:
           {{ cardCityData.imgLicense }} &boxv; Site: {{ cardCityData.imgSite }}
         </p>
       </div>
     </ng-template>
-    <p [innerHTML]="cardCityData.summary"></p>
+    <p [innerHTML]="cardCityData.summary" class="summary"></p>
   </p-card>
 </div>
+
+<!-- <div *ngIf="isLoading">
+  <div class="border-round border-1 surface-border p-4 surface-card">
+    <div class="flex mb-3">
+      <div>
+        <p-skeleton height=".5rem"></p-skeleton>
+      </div>
+    </div>
+    <p-skeleton width="80vw" height="150px"></p-skeleton>
+    <div class="flex justify-content-between mt-3">
+      <p-skeleton width="4rem" height="2rem"></p-skeleton>
+      <p-skeleton width="4rem" height="2rem"></p-skeleton>
+    </div>
+  </div>
+</div> -->

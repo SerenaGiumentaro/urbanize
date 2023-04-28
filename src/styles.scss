@@ -4,13 +4,15 @@
   margin: 0;
   padding: 0;
   box-sizing: content-box;
+  font-family: 'Nunito', sans-serif;
 }
 :root{
   --primary: #5073da;
-  // ;
-  // --main-text:#c2b552 ;
-  // --accent:
-  // #c2b552;
+  // #eb5757 arancione
+}
+.p-card.p-component{
+  display: flex;
+  flex-direction: row;
 }
 .flex-center{
   display: flex;
@@ -24,9 +26,19 @@
 .column{
   flex-direction: column;
 }
-
+canvas{
+  padding: 1rem;
+}
+.p-card-body,.p-card-header{
+  flex:1;
+}
 body{
   background-color: var(--primary);
   color: var(--main-text);
+}
+@media screen  and (max-width: 720px) {
+  .p-card.p-component{
+    flex-direction: column;
+  }
 }
 

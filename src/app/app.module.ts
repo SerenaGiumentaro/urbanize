@@ -18,7 +18,7 @@ import { CardModule } from 'primeng/card';
 import { DataViewComponent } from './components/data-view/data-view.component';
 import { MessagesModule } from 'primeng/messages';
 import { TableModule } from 'primeng/table';
-
+import { SkeletonModule } from 'primeng/skeleton';
 
 @NgModule({
   declarations: [
@@ -41,6 +41,7 @@ import { TableModule } from 'primeng/table';
     CardModule,
     MessagesModule,
     TableModule,
+    SkeletonModule,
 
   ],
   providers: [],
