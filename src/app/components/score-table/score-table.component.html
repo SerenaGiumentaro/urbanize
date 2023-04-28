@@ -1,7 +1,11 @@
 <p-table
   [columns]="cols"
   [value]="categories"
-  [tableStyle]="{ 'min-width': '20rem', width: '80vw' , backgroundColor: '#fff'}"
+  [tableStyle]="{
+    'min-width': '20rem',
+    width: '80vw',
+    backgroundColor: '#fff'
+  }"
 >
   <ng-template pTemplate="header">
     <tr>
@@ -14,8 +18,13 @@
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-category let-columns="columns">
-    <tr [style]="{ backgroundColor: category.color + '80', color: '#000', fontWeight: '900'}">
-    <!-- <tr [style]="{ color: category.color, fontWeight: '900'}"> -->
+    <tr
+      [style]="{
+        backgroundColor: category.color + '80',
+        color: '#000',
+        fontWeight: '900'
+      }"
+    >
       <td>
         {{ category.name }}
       </td>

@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DataViewComponent } from './data-view.component';
 
 describe('DataViewComponent', () => {
@@ -8,9 +7,8 @@ describe('DataViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DataViewComponent ]
-    })
-    .compileComponents();
+      declarations: [DataViewComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(DataViewComponent);
     component = fixture.componentInstance;

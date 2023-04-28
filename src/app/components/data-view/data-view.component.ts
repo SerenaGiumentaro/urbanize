@@ -1,5 +1,4 @@
-import { Component, DoCheck, OnInit } from '@angular/core';
-import { CityScore } from 'src/app/interface';
+import { Component, OnInit } from '@angular/core';
 import { CityDataService } from 'src/app/services/city-data.service';
 
 @Component({
@@ -41,18 +40,18 @@ export class DataViewComponent implements OnInit {
         this.categories = [...res.categories];
         this.cardCityData.summary = res.summary;
         this.cardCityData.score = res.teleport_city_score;
-      }
+      },
     });
 
     this.cityDataService.dataImage$.subscribe({
-      next: res => {
+      next: (res) => {
         this.cardCityData.name = this.cityDataService.urbanArea.name;
         this.cardCityData.hrefImg = res.photos[0].image.mobile;
         this.cardCityData.imgLicense = res.photos[0].attribution.license;
         this.cardCityData.imgPhotographer =
-        res.photos[0].attribution.photographer;
+          res.photos[0].attribution.photographer;
         this.cardCityData.imgSite = res.photos[0].attribution.site;
-      }
-    })
+      },
+    });
   }
 }

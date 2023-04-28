@@ -74,7 +74,7 @@ export class CityDataService {
   fillCityImg() {
     this.getCityImage(this.urbanArea.href).subscribe({
       next: (res) => {
-        this.dataImage.next(res)
+        this.dataImage.next(res);
         this.cityImg = res;
       },
     });
