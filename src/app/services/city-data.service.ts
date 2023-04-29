@@ -23,6 +23,7 @@ export class CityDataService {
       },
     ],
   };
+
   urbanArea: { href: string; name: string } = {
     href: '',
     name: '',
@@ -44,17 +45,17 @@ export class CityDataService {
   dataImage = new BehaviorSubject<CityImage>(this.cityImg);
   dataImage$ = this.dataImage.asObservable();
 
-  getCurrentUrbanArea() {
-    return this.urbanArea;
-  }
+  // getCurrentUrbanArea() {
+  //   return this.urbanArea;
+  // }
 
-  getCurrentCityScore() {
-    return this.cityScore;
-  }
+  // getCurrentCityScore() {
+  //   return this.cityScore;
+  // }
 
-  getCurrentCityImg() {
-    return this.cityImg;
-  }
+  // getCurrentCityImg() {
+  //   return this.cityImg;
+  // }
 
   getAllCities(query: string) {
     return this.http
