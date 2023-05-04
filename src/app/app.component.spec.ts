@@ -1,12 +1,25 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { HeadingComponent } from './components/heading/heading.component';
+import { SearchComponent } from './components/search/search.component';
+import { DataViewComponent } from './components/data-view/data-view.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { ButtonModule } from 'primeng/button';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent, HeadingComponent, SearchComponent, DataViewComponent
       ],
+      imports: [
+        HttpClientTestingModule,
+        AutoCompleteModule,
+        ButtonModule,
+        ReactiveFormsModule
+      ]
     }).compileComponents();
   });
 
@@ -14,18 +27,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'urbanize'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('urbanize');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('urbanize app is running!');
   });
 });

@@ -1,6 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Message } from 'primeng/api';
 import { CityDataService } from 'src/app/services/city-data.service';
 
 @Component({
@@ -39,6 +38,8 @@ export class SearchComponent implements OnInit {
         const result =
           res._embedded['city:search-results'][0]?._embedded?.['city:item']
             ?._links?.['city:urban_area'];
+            console.log(result);
+
         if (result) {
           this.hasData.emit(true);
           this.noResult = false;

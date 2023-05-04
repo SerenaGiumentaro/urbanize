@@ -45,18 +45,6 @@ export class CityDataService {
   dataImage = new BehaviorSubject<CityImage>(this.cityImg);
   dataImage$ = this.dataImage.asObservable();
 
-  // getCurrentUrbanArea() {
-  //   return this.urbanArea;
-  // }
-
-  // getCurrentCityScore() {
-  //   return this.cityScore;
-  // }
-
-  // getCurrentCityImg() {
-  //   return this.cityImg;
-  // }
-
   getAllCities(query: string) {
     return this.http
       .get<SearchCity>(`https://api.teleport.org/api/cities/?search=${query}`)

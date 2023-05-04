@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ScoreTableComponent } from './score-table.component';
+import { TableModule } from 'primeng/table';
 
 describe('ScoreTableComponent', () => {
   let component: ScoreTableComponent;
@@ -8,7 +9,10 @@ describe('ScoreTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ScoreTableComponent ]
+      declarations: [ ScoreTableComponent ],
+      imports: [
+        TableModule
+      ]
     })
     .compileComponents();
 
